@@ -1,0 +1,15 @@
+# Data and models (logs, versions, ckpt)
+data/
+!data/**/.gitkeep
+models/
+!models/**/.gitkeep
+# Virtual environements 
+.venv/
+env/
+# Cache
+__pycache__/
+*.pyc
+# System files
+.DS_Store
+# Jupyter checkpoints 
+.ipynb_checkpoints/
