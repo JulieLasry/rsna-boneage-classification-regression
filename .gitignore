@@ -1,14 +1,25 @@
-# Data and models (logs, versions, ckpt)
-data/
-!data/**/.gitkeep
-models/
-!models/**/.gitkeep
+# Data : ignored content but keeped folders
+/data/raw/*
+/data/processed/*
+!/data/raw/.gitkeep
+!/data/processed/.gitkeep
+# Models : (ckt, pt, pth) ignored but keeped folders
+/models/*
+!/models/.gitkeep
+*.pt
+*.pth
+*.ckpt
+# Tracked experiments (mlflow and optuna)
+mlruns/
+mlartifacts/
+*.db
 # Virtual environements 
 .venv/
 env/
 # Cache
 __pycache__/
 *.pyc
+.pytest_cache/
 # System files
 .DS_Store
 # Jupyter checkpoints 
