@@ -1,12 +1,11 @@
 import yaml
-import os
 from pathlib import Path
 from src.data.raw_data_loading import RawDataLoading
 from src.data.datamodule import DataModule
 
 CONFIG_DIR: Path = Path(__file__).parent / 'configs'
 
-class Processer():
+class Preprocess():
     """
     Processer main function to load our raw data,
     process and transform this data, create dataloaders
@@ -22,10 +21,10 @@ class Processer():
     @staticmethod
     def run() -> dict:
         # Configs paths loaded
-        preprocesser_config: dict = Processer.load_config(
+        preprocesser_config: dict = Preprocess.load_config(
             CONFIG_DIR / 'preprocessing_config.yaml'
         )
-        training_config: dict = Processer.load_config(
+        training_config: dict = Preprocess.load_config(
             CONFIG_DIR / 'training_config.yaml'
         )
 
@@ -53,4 +52,4 @@ class Processer():
         return dataloaders_dict
 
 if __name__ == '__main__':
-    dataloaders_dict: dict = Processer.run()
+    dataloaders_dict: dict = Preprocess.run()

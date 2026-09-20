@@ -80,7 +80,7 @@ class BoneAgeDataset(Dataset):
                 tensor_image: torch.Tensor = self.final_transform(image=processed_file)['image']
 
         tensor_label: torch.Tensor = torch.tensor(label, dtype=torch.long)
-        tensor_boneage: torch.Tensor = torch.tensor(boneage, dtype=torch.long) 
+        tensor_boneage: torch.Tensor = torch.tensor(boneage, dtype=torch.float32) 
         tensor_male: torch.Tensor = torch.tensor(male, dtype=torch.float32)
         
         return tensor_image, tensor_label, tensor_boneage, tensor_male
